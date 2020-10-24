@@ -1,0 +1,3 @@
+com\xiangxuepf\p2p\pay\config\AlipayConfig.class
+com\xiangxuepf\p2p\pay\control\WxpayController.class
+com\xiangxuepf\p2p\pay\control\AlipayController.class

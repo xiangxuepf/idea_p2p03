@@ -1,0 +1,17 @@
+com\xiangxuepf\p2p\exterface\model\user\FinanceAccount.class
+com\xiangxuepf\p2p\exterface\model\user\User.class
+com\xiangxuepf\p2p\exterface\model\loan\RechargeRecord.class
+com\xiangxuepf\p2p\exterface\service\loan\LoanInfoService.class
+com\xiangxuepf\p2p\exterface\model\loan\LoanInfo.class
+com\xiangxuepf\p2p\exterface\vo\ResultObjectVO.class
+com\xiangxuepf\p2p\exterface\service\loan\RechargeRecordService.class
+com\xiangxuepf\p2p\exterface\model\loan\IncomeRecord.class
+com\xiangxuepf\p2p\exterface\service\user\FinanceAccountService.class
+com\xiangxuepf\p2p\exterface\service\loan\BidInfoService.class
+com\xiangxuepf\p2p\exterface\model\loan\BidInfo.class
+com\xiangxuepf\p2p\exterface\service\loan\OnlyNumberService.class
+com\xiangxuepf\p2p\exterface\vo\PaginationVO.class
+com\xiangxuepf\p2p\exterface\service\user\UserService.class
+com\xiangxuepf\p2p\exterface\vo\BidUserTopVO.class
+com\xiangxuepf\p2p\exterface\service\loan\IncomeRecordService.class
+com\xiangxuepf\p2p\exterface\vo\BidInfoVO.class

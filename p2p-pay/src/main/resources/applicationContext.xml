@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+  xmlns:context="http://www.springframework.org/schema/context" 
+  xmlns:p="http://www.springframework.org/schema/p" 
+  xmlns:aop="http://www.springframework.org/schema/aop"  
+  xmlns:tx="http://www.springframework.org/schema/tx" 
+  xsi:schemaLocation=" 
+        http://www.springframework.org/schema/beans  
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context  
+        http://www.springframework.org/schema/context/spring-context.xsd 
+        http://www.springframework.org/schema/tx  
+        http://www.springframework.org/schema/tx/spring-tx.xsd 
+        http://www.springframework.org/schema/aop  
+        http://www.springframework.org/schema/aop/spring-aop.xsd"> 
+        
+
+
+  <!-- 导入spring mvc配置文件 --> 
+  <import resource="applicationContext-mvc.xml"/>
+
+  <!-- 加载系统配置文件 -->
+  <context:property-placeholder location="classpath:*.properties"/>
+
+  <bean class="com.xiangxuepf.p2p.pay.config.AlipayConfig">
+    <property name="getway_url" value="${alipayGatewayUrl}"/>
+    <property name="app_id" value="${alipayAppId}"/>
+    <property name="private_key" value="${alipayMerchantPrivateKey}"/>
+    <property name="format" value="${alipayFormat}"/>
+    <property name="charset" value="${alipayCharset}"/>
+    <property name="alipay_public_key" value="${alipayPublicKey}"/>
+    <property name="sign_type" value="${alipaySignType}"/>
+    <property name="alipay_return_url" value="${alipayReturnUrl}"/>
+    <property name="alipay_notify_url" value="${alipayNotifyUrl}"/>
+    <!--<property name="pay_p2p_alipay_back_url" value="${pay_p2p_alipay_back_url}"/>-->
+  </bean>
+  
+  
+</beans>

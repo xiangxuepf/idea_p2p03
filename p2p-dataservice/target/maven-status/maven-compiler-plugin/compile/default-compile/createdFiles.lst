@@ -1,0 +1,16 @@
+com\xiangxuepf\p2p\dataservice\service\user\FinanceAccountServiceImpl.class
+com\xiangxuepf\p2p\dataservice\test\TestOversell.class
+com\xiangxuepf\p2p\dataservice\mapper\user\UserMapper.class
+com\xiangxuepf\p2p\dataservice\test\TestLog4j2.class
+com\xiangxuepf\p2p\dataservice\mapper\loan\LoanInfoMapper.class
+com\xiangxuepf\p2p\dataservice\service\loan\BidInfoServiceImpl.class
+com\xiangxuepf\p2p\dataservice\mapper\loan\RechargeRecordMapper.class
+com\xiangxuepf\p2p\dataservice\service\loan\LoanInfoServiceImpl.class
+com\xiangxuepf\p2p\dataservice\mapper\user\FinanceAccountMapper.class
+com\xiangxuepf\p2p\dataservice\mapper\loan\IncomeRecordMapper.class
+com\xiangxuepf\p2p\dataservice\mapper\loan\BidInfoMapper.class
+com\xiangxuepf\p2p\dataservice\service\loan\RechargeRecordServiceImpl.class
+com\xiangxuepf\p2p\dataservice\service\user\UserServiceImpl.class
+com\xiangxuepf\p2p\dataservice\service\loan\OnlyNumberServiceImpl.class
+com\xiangxuepf\p2p\dataservice\test\TestOversell$1.class
+com\xiangxuepf\p2p\dataservice\service\loan\IncomeRecordServiceImpl.class

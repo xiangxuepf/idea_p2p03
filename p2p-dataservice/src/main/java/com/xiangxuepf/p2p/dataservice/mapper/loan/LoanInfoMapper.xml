@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiangxuepf.p2p.dataservice.mapper.loan.LoanInfoMapper">
+  <resultMap id="BaseResultMap" type="com.xiangxuepf.p2p.exterface.model.loan.LoanInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="rate" jdbcType="DOUBLE" property="rate" />
+    <result column="cycle" jdbcType="INTEGER" property="cycle" />
+    <result column="release_time" jdbcType="DATE" property="releaseTime" />
+    <result column="product_type" jdbcType="INTEGER" property="productType" />
+    <result column="product_no" jdbcType="VARCHAR" property="productNo" />
+    <result column="product_money" jdbcType="DOUBLE" property="productMoney" />
+    <result column="left_product_money" jdbcType="DOUBLE" property="leftProductMoney" />
+    <result column="bid_min_limit" jdbcType="DOUBLE" property="bidMinLimit" />
+    <result column="bid_max_limit" jdbcType="DOUBLE" property="bidMaxLimit" />
+    <result column="product_status" jdbcType="INTEGER" property="productStatus" />
+    <result column="product_full_time" jdbcType="TIMESTAMP" property="productFullTime" />
+    <result column="product_desc" jdbcType="LONGVARCHAR" property="productDesc" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+  </resultMap>
+  <!--<resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" tyLoanInfoInfo">-->
+  <!--</resultMap>-->
+  <sql id="Base_Column_List">
+    id, product_name, rate, cycle, release_time, product_type, product_no, product_money, 
+    left_product_money, bid_min_limit, bid_max_limit, product_status, product_full_time, 
+    product_desc,version
+  </sql>
+  <!--<sql id="Blob_Column_List">-->
+    <!--product_desc-->
+  <!--</sql>-->
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+        from b_loan_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from b_loan_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xiangxuepf.p2p.exterface.model.loan.LoanInfo">
+    insert into b_loan_info (id, product_name, rate, 
+      cycle, release_time, product_type, 
+      product_no, product_money, left_product_money, 
+      bid_min_limit, bid_max_limit, product_status, 
+      product_full_time, version, product_desc
+      )
+    values (#{id,jdbcType=INTEGER}, #{productName,jdbcType=VARCHAR}, #{rate,jdbcType=DOUBLE}, 
+      #{cycle,jdbcType=INTEGER}, #{releaseTime,jdbcType=DATE}, #{productType,jdbcType=INTEGER}, 
+      #{productNo,jdbcType=VARCHAR}, #{productMoney,jdbcType=DOUBLE}, #{leftProductMoney,jdbcType=DOUBLE}, 
+      #{bidMinLimit,jdbcType=DOUBLE}, #{bidMaxLimit,jdbcType=DOUBLE}, #{productStatus,jdbcType=INTEGER}, 
+      #{productFullTime,jdbcType=TIMESTAMP}, #{version,jdbcType=INTEGER}, #{productDesc,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xiangxuepf.p2p.exterface.model.loan.LoanInfo">
+    insert into b_loan_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="productName != null">
+        product_name,
+      </if>
+      <if test="rate != null">
+        rate,
+      </if>
+      <if test="cycle != null">
+        cycle,
+      </if>
+      <if test="releaseTime != null">
+        release_time,
+      </if>
+      <if test="productType != null">
+        product_type,
+      </if>
+      <if test="productNo != null">
+        product_no,
+      </if>
+      <if test="productMoney != null">
+        product_money,
+      </if>
+      <if test="leftProductMoney != null">
+        left_product_money,
+      </if>
+      <if test="bidMinLimit != null">
+        bid_min_limit,
+      </if>
+      <if test="bidMaxLimit != null">
+        bid_max_limit,
+      </if>
+      <if test="productStatus != null">
+        product_status,
+      </if>
+      <if test="productFullTime != null">
+        product_full_time,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="productDesc != null">
+        product_desc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="rate != null">
+        #{rate,jdbcType=DOUBLE},
+      </if>
+      <if test="cycle != null">
+        #{cycle,jdbcType=INTEGER},
+      </if>
+      <if test="releaseTime != null">
+        #{releaseTime,jdbcType=DATE},
+      </if>
+      <if test="productType != null">
+        #{productType,jdbcType=INTEGER},
+      </if>
+      <if test="productNo != null">
+        #{productNo,jdbcType=VARCHAR},
+      </if>
+      <if test="productMoney != null">
+        #{productMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="leftProductMoney != null">
+        #{leftProductMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="bidMinLimit != null">
+        #{bidMinLimit,jdbcType=DOUBLE},
+      </if>
+      <if test="bidMaxLimit != null">
+        #{bidMaxLimit,jdbcType=DOUBLE},
+      </if>
+      <if test="productStatus != null">
+        #{productStatus,jdbcType=INTEGER},
+      </if>
+      <if test="productFullTime != null">
+        #{productFullTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="productDesc != null">
+        #{productDesc,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xiangxuepf.p2p.exterface.model.loan.LoanInfo">
+    update b_loan_info
+    <set>
+      <if test="productName != null">
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="rate != null">
+        rate = #{rate,jdbcType=DOUBLE},
+      </if>
+      <if test="cycle != null">
+        cycle = #{cycle,jdbcType=INTEGER},
+      </if>
+      <if test="releaseTime != null">
+        release_time = #{releaseTime,jdbcType=DATE},
+      </if>
+      <if test="productType != null">
+        product_type = #{productType,jdbcType=INTEGER},
+      </if>
+      <if test="productNo != null">
+        product_no = #{productNo,jdbcType=VARCHAR},
+      </if>
+      <if test="productMoney != null">
+        product_money = #{productMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="leftProductMoney != null">
+        left_product_money = #{leftProductMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="bidMinLimit != null">
+        bid_min_limit = #{bidMinLimit,jdbcType=DOUBLE},
+      </if>
+      <if test="bidMaxLimit != null">
+        bid_max_limit = #{bidMaxLimit,jdbcType=DOUBLE},
+      </if>
+      <if test="productStatus != null">
+        product_status = #{productStatus,jdbcType=INTEGER},
+      </if>
+      <if test="productFullTime != null">
+        product_full_time = #{productFullTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="productDesc != null">
+        product_desc = #{productDesc,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.xiangxuepf.p2p.exterface.model.loan.LoanInfo">
+    update b_loan_info
+    set product_name = #{productName,jdbcType=VARCHAR},
+      rate = #{rate,jdbcType=DOUBLE},
+      cycle = #{cycle,jdbcType=INTEGER},
+      release_time = #{releaseTime,jdbcType=DATE},
+      product_type = #{productType,jdbcType=INTEGER},
+      product_no = #{productNo,jdbcType=VARCHAR},
+      product_money = #{productMoney,jdbcType=DOUBLE},
+      left_product_money = #{leftProductMoney,jdbcType=DOUBLE},
+      bid_min_limit = #{bidMinLimit,jdbcType=DOUBLE},
+      bid_max_limit = #{bidMaxLimit,jdbcType=DOUBLE},
+      product_status = #{productStatus,jdbcType=INTEGER},
+      product_full_time = #{productFullTime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=INTEGER},
+      product_desc = #{productDesc,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xiangxuepf.p2p.exterface.model.loan.LoanInfo">
+    update b_loan_info
+    set product_name = #{productName,jdbcType=VARCHAR},
+      rate = #{rate,jdbcType=DOUBLE},
+      cycle = #{cycle,jdbcType=INTEGER},
+      release_time = #{releaseTime,jdbcType=DATE},
+      product_type = #{productType,jdbcType=INTEGER},
+      product_no = #{productNo,jdbcType=VARCHAR},
+      product_money = #{productMoney,jdbcType=DOUBLE},
+      left_product_money = #{leftProductMoney,jdbcType=DOUBLE},
+      bid_min_limit = #{bidMinLimit,jdbcType=DOUBLE},
+      bid_max_limit = #{bidMaxLimit,jdbcType=DOUBLE},
+      product_status = #{productStatus,jdbcType=INTEGER},
+      product_full_time = #{productFullTime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectHistoryAverageRate" resultType="java.lang.Double">
+    select cast(avg(rate) as DECIMAL(10,2)) from b_loan_info
+  </select>
+
+  <!--分页查询产品信息列表-->
+  <select id="selectLoanInfoByPage" resultMap="BaseResultMap">
+    select
+      <include refid="Base_Column_List"/>
+	from b_loan_info
+    <!--<where>-->
+      <!--<if test="productType != null"/>-->
+      <!--product_type = #{productType}-->
+    <!--</where>-->
+    <if test="productType != null">
+      WHERE
+        product_type = #{productType}
+    </if>
+	order by
+		release_time desc
+	limit #{currentPage},#{pageSize}
+  </select>
+
+  <!--根据产品类型获取产品的总记录数；-->
+  <select id="selectTotal" resultType="java.lang.Long">
+    SELECT
+      COUNT(*)
+    FROM
+      b_loan_info
+    <if test="productType != null">
+      WHERE
+      product_type = #{productType}
+    </if>
+    <!--<where>-->
+      <!--<if test="productType != null">-->
+        <!--product_type = #{productType}-->
+      <!--</if>-->
+    <!--</where>-->
+  </select>
+
+  <!--更新产品剩余可投金额-->
+  <update id="updateLeftProductMoneyByLoanId" >
+    update
+        b_loan_info
+	set
+	    left_product_money = left_product_money - #{bidMoney},
+	    version = version + 1
+	where
+		id = #{loanId}
+	and
+		version = #{version}
+	and
+		(left_product_money - #{bidMoney}) >= 0
+  </update>
+
+  <!--根据产品的状态获取产品信息-->
+  <select id="selectLoanInfoByProductStatus" resultMap="BaseResultMap">
+    select
+		<include refid="Base_Column_List"/>
+	from
+		b_loan_info
+	where
+		product_status = #{productStatus}
+  </select>
+
+
+</mapper>

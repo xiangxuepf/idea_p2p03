@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/p2p-common/target/maven-archiver/maven-archiver (1).iml" filepath="$PROJECT_DIR$/p2p-common/target/maven-archiver/maven-archiver (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-dataservice/target/maven-archiver/maven-archiver (2).iml" filepath="$PROJECT_DIR$/p2p-dataservice/target/maven-archiver/maven-archiver (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-exterface/target/maven-archiver/maven-archiver (3).iml" filepath="$PROJECT_DIR$/p2p-exterface/target/maven-archiver/maven-archiver (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-pay/target/maven-archiver/maven-archiver (4).iml" filepath="$PROJECT_DIR$/p2p-pay/target/maven-archiver/maven-archiver (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-web/target/maven-archiver/maven-archiver (5).iml" filepath="$PROJECT_DIR$/p2p-web/target/maven-archiver/maven-archiver (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-QRCode/p2p-QRCode.iml" filepath="$PROJECT_DIR$/p2p-QRCode/p2p-QRCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-common/p2p-common.iml" filepath="$PROJECT_DIR$/p2p-common/p2p-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-dataservice/p2p-dataservice.iml" filepath="$PROJECT_DIR$/p2p-dataservice/p2p-dataservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-exterface/p2p-exterface.iml" filepath="$PROJECT_DIR$/p2p-exterface/p2p-exterface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-httpClient/p2p-httpClient.iml" filepath="$PROJECT_DIR$/p2p-httpClient/p2p-httpClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-mybatisGenerator/p2p-mybatisGenerator.iml" filepath="$PROJECT_DIR$/p2p-mybatisGenerator/p2p-mybatisGenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-parent/p2p-parent.iml" filepath="$PROJECT_DIR$/p2p-parent/p2p-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-pay/p2p-pay.iml" filepath="$PROJECT_DIR$/p2p-pay/p2p-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-timer/p2p-timer.iml" filepath="$PROJECT_DIR$/p2p-timer/p2p-timer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-web/p2p-web.iml" filepath="$PROJECT_DIR$/p2p-web/p2p-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test02/test02.iml" filepath="$PROJECT_DIR$/test02/test02.iml" />
+    </modules>
+  </component>
+</project>
